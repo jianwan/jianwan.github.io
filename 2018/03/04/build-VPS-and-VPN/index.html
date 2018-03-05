@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  * 搭建步骤了解  申请Github学生包  注册DigitalOcean  购买服务器  配置ss以及用户端   * 申请Github学生包（限在校学生） ** 为什么要申请  申请Github学生包可以获得 DigitalOcean 五十美元优惠，加上注册">
+<meta name="description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  搭建步骤了解 申请Github学生包  注册DigitalOcean  使用DigitalOcean搭建VPS  配置Shadowsocks以及客户端   申请Github学生包（限在校学生）为什么要申请 申请Github学生包可以获得 DigitalOcea">
 <meta name="keywords" content="VPN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用DigitalOcean+Shadowsocks搭建VPN">
+<meta property="og:title" content="如何使用DigitalOcean+Shadowsocks搭建VPN">
 <meta property="og:url" content="http://yoursite.com/2018/03/04/build-VPS-and-VPN/index.html">
 <meta property="og:site_name" content="薰衣草的国度">
-<meta property="og:description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  * 搭建步骤了解  申请Github学生包  注册DigitalOcean  购买服务器  配置ss以及用户端   * 申请Github学生包（限在校学生） ** 为什么要申请  申请Github学生包可以获得 DigitalOcean 五十美元优惠，加上注册">
+<meta property="og:description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  搭建步骤了解 申请Github学生包  注册DigitalOcean  使用DigitalOcean搭建VPS  配置Shadowsocks以及客户端   申请Github学生包（限在校学生）为什么要申请 申请Github学生包可以获得 DigitalOcea">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-04T16:57:59.620Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/005HNx1Sgy1fp1r4hfxraj30n00elmyj.jpg">
+<meta property="og:updated_time" content="2018-03-05T03:49:48.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用DigitalOcean+Shadowsocks搭建VPN">
-<meta name="twitter:description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  * 搭建步骤了解  申请Github学生包  注册DigitalOcean  购买服务器  配置ss以及用户端   * 申请Github学生包（限在校学生） ** 为什么要申请  申请Github学生包可以获得 DigitalOcean 五十美元优惠，加上注册">
+<meta name="twitter:title" content="如何使用DigitalOcean+Shadowsocks搭建VPN">
+<meta name="twitter:description" content="一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~  搭建步骤了解 申请Github学生包  注册DigitalOcean  使用DigitalOcean搭建VPS  配置Shadowsocks以及客户端   申请Github学生包（限在校学生）为什么要申请 申请Github学生包可以获得 DigitalOcea">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/005HNx1Sgy1fp1r4hfxraj30n00elmyj.jpg">
 
 
 
@@ -126,7 +128,7 @@
 
 
 
-  <title>使用DigitalOcean+Shadowsocks搭建VPN | 薰衣草的国度</title>
+  <title>如何使用DigitalOcean+Shadowsocks搭建VPN | 薰衣草的国度</title>
   
 
 
@@ -280,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用DigitalOcean+Shadowsocks搭建VPN</h1>
+          <h1 class="post-title" itemprop="name headline">如何使用DigitalOcean+Shadowsocks搭建VPN</h1>
         
 
         <div class="post-meta">
@@ -360,36 +362,78 @@
         <blockquote>
 <p>一直在用VPN，刚好自己买了个服务器，于是想着自己搭个梯子试试~效果还不错，于是写下这篇博客记录下，也方便自己和大家哈哈~文末有福利~</p>
 </blockquote>
-<p><em>*</em> 搭建步骤了解<br></p>
-<ul>
+<h3 id="搭建步骤了解"><a href="#搭建步骤了解" class="headerlink" title="搭建步骤了解"></a>搭建步骤了解<br></h3><ul>
 <li><p>申请<code>Github</code>学生包</p>
 </li>
 <li><p>注册<code>DigitalOcean</code></p>
 </li>
-<li><p>购买服务器</p>
+<li><p>使用<code>DigitalOcean</code>搭建<code>VPS</code></p>
 </li>
-<li><p>配置ss以及用户端</p>
+<li><p>配置<code>Shadowsocks</code>以及客户端</p>
 </li>
 </ul>
-<p><em>*</em> 申请<code>Github</code>学生包（限在校学生）</p>
-<p><em>**</em> 为什么要申请</p>
-<p> 申请<code>Github</code>学生包可以获得 <code>DigitalOcean</code> 五十美元优惠，加上注册时需要的五美元激活，如果购买五美元每月的服务器，你相当可以用五美元用一年；</p>
-<p><em>**</em> 如何申请</p>
-<ul>
+<h3 id="申请Github学生包（限在校学生）"><a href="#申请Github学生包（限在校学生）" class="headerlink" title="申请Github学生包（限在校学生）"></a>申请<code>Github</code>学生包（限在校学生）</h3><h4 id="为什么要申请"><a href="#为什么要申请" class="headerlink" title="为什么要申请"></a>为什么要申请</h4><p> 申请<code>Github</code>学生包可以获得 <code>DigitalOcean</code> 五十美元优惠，加上注册时需要的五美元激活，如果购买五美元每月的服务器，你相当可以用五美元用近一年；</p>
+<h4 id="如何申请"><a href="#如何申请" class="headerlink" title="如何申请"></a>如何申请</h4><ul>
 <li><p>注册/登录 <code>Github</code>  <a href="https://github.com/join" target="_blank" rel="noopener">https://github.com/join</a></p>
-<p>注册登录的步骤相比大家都懂，此处就忽略咯~</p>
+<p>注册登录的步骤想必大家都懂，此处就忽略咯~(如果没有听过什么是<code>Github</code>的点击这里  <a href="http://www.runoob.com/w3cnote/git-guide.html" target="_blank" rel="noopener">Github 简明教程</a>)</p>
 </li>
-<li><p>申请；</p>
-<p>申请地址：<a href="https://education.github.com/pack/" target="_blank" rel="noopener">GitHub Student Developer Pack</a></p>
-</li>
-<li><p>学生认证；</p>
+<li><p>申请<code>Github</code>学生包</p>
 <ul>
-<li></li>
-<li></li>
+<li><p>申请地址：<a href="https://education.github.com/pack/" target="_blank" rel="noopener">GitHub Student Developer Pack</a></p>
+</li>
+<li><p>点击按钮 <code>Get your pack</code>，没有进行学生认证过的它需要你的<code>Github</code>账号进行下一步</p>
+<p>的学生认证,认证过了的可以直接看到你的学生包；</p>
+</li>
+</ul>
+</li>
+<li><p>学生认证(邮箱认证和证件认证)</p>
+<ul>
+<li><p>邮箱认证(推荐)：使用学校的 edu 邮箱，在<code>Github</code>–&gt;<code>settings</code>–&gt;<code>Emails</code>添加进个人邮箱，用来认证学生身份；认证通过的时间不确定，从十几分钟到一周都有可能；我认证的时候十几分钟就通过了；</p>
+<ul>
+<li>证件认证：图片内容来自 <a href="http://seanxp.com/2016/GitHub-Student-Developer-Pack-md/" target="_blank" rel="noopener"> 博客 </a></li>
+</ul>
+<p><img src="http://ww1.sinaimg.cn/large/005HNx1Sgy1fp1r4hfxraj30n00elmyj.jpg" alt="证件认证"></p>
+</li>
 </ul>
 </li>
 </ul>
-<p>搭建一个VPN你得有一个服务器吧，而且想搭建VPN必须得国外的VPS，国内外的VPS有以下推荐 <a href="https://www.zhihu.com/question/40865206" target="_blank" rel="noopener">知乎 有哪些对学生有优惠的VPS云主机？</a>。</p>
+<p>  如果你收到了<code>Github</code>的申请成功的回复邮件那么恭喜你已申请成功了，以后就可以使用<code>DigitalOcean</code>的50美元学生优惠劵（学生包里面其他的优惠一样可以使用），优惠查询页面在这里 <a href="https://education.github.com/pack/offers" target="_blank" rel="noopener">https://education.github.com/pack/offers</a></p>
+<h3 id="注册DigitalOcean"><a href="#注册DigitalOcean" class="headerlink" title="注册DigitalOcean"></a>注册<code>DigitalOcean</code></h3><ul>
+<li><p><code>DigitalOcean</code>介绍<br></p>
+<p><strong><a href="https://m.do.co/c/7ae88928e30a" target="_blank" rel="noopener">注册链接</a></strong>：通过我的注册链接注册后，<strong>你可以直接获得10美元</strong>，我可以在你使用后获得优惠；</p>
+</li>
+</ul>
+<p><code>DigitalOcean</code>是一家VPS服务商，最低的套餐是 5 刀/月，这一款配置用来搭建ss足够使用了，我们使用 学生包的50美元优惠+激活的5美元+通过的我的注册链接得到的10美元，你可以免费试用VPS一年啦~</p>
+<ul>
+<li><p><code>DigitalOcean</code>注册<br></p>
+<p>点击我上面的链接后，你可以开始注册了，注册步骤和其他的注册类似，就是<code>DO</code>后面需要注册并使用<code>PayPal</code>支付五美元才能试用获得的50美元的优惠劵；</p>
+<p>图文详情可借鉴博客<a href="https://withcic.cn/blog/2016/04/23/github-student-digitalocean/#tip6" target="_blank" rel="noopener">利用github学生包注册DigitalOcean的VPS</a></p>
+</li>
+</ul>
+<h3 id="使用DigitalOcean搭建VPS"><a href="#使用DigitalOcean搭建VPS" class="headerlink" title="使用DigitalOcean搭建VPS"></a>使用<code>DigitalOcean</code>搭建<code>VPS</code></h3><h3 id="配置Shadowsocks以及客户端"><a href="#配置Shadowsocks以及客户端" class="headerlink" title="配置Shadowsocks以及客户端"></a>配置<code>Shadowsocks</code>以及客户端</h3><p>本来想自己写这两步来着，但是看了别人的博客发现自己目前补充不了什么了···先把链接贴出来，以后碰到再更新好了~</p>
+<p><strong><a href="https://segmentfault.com/a/1190000011564797#articleHeader2" target="_blank" rel="noopener">DigitalOcean搭建shadowsocks梯子完全图文记录（Win+Android）</a></strong></p>
+<p>文末福利~</p>
+<p>免费分享自己搭建的ss的一个账号，不保证一直能用哦~谢谢看完文章~</p>
+<p>`<br>服务器IP：159.65.106.213<br>服务器端口：8388<br>本地端口：1080<br>密码：18875146594Wan</p>
+<p>`</p>
+<p>参考链接 &amp; 鸣谢：</p>
+<ul>
+<li><p><a href="https://segmentfault.com/a/1190000011564797#articleHeader2" target="_blank" rel="noopener">DigitalOcean搭建shadowsocks梯子完全图文记录（Win+Android）</a></p>
+</li>
+<li><p><a href="http://seanxp.com/2016/GitHub-Student-Developer-Pack-md/" target="_blank" rel="noopener">Github 学生包申请</a></p>
+</li>
+<li><p><a href="https://www.mf8.biz/github-education-pack/" target="_blank" rel="noopener">Github 学生包申请教程</a></p>
+</li>
+</ul>
+<p>链接推荐</p>
+<ul>
+<li><p><a href="https://www.zhihu.com/question/40865206" target="_blank" rel="noopener">知乎 有哪些对学生有优惠的VPS云主机？</a></p>
+</li>
+<li><p><a href="https://github.com/AntBranch/awesome-github" target="_blank" rel="noopener">Github使用合集</a></p>
+</li>
+<li><p><a href="https://github.com/ivmm/Student-resources" target="_blank" rel="noopener">学生优惠合集</a></p>
+</li>
+</ul>
 
       
     </div>
@@ -480,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -561,6 +614,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建步骤了解"><span class="nav-number">1.</span> <span class="nav-text">搭建步骤了解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#申请Github学生包（限在校学生）"><span class="nav-number">2.</span> <span class="nav-text">申请Github学生包（限在校学生）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么要申请"><span class="nav-number">2.1.</span> <span class="nav-text">为什么要申请</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何申请"><span class="nav-number">2.2.</span> <span class="nav-text">如何申请</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册DigitalOcean"><span class="nav-number">3.</span> <span class="nav-text">注册DigitalOcean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用DigitalOcean搭建VPS"><span class="nav-number">4.</span> <span class="nav-text">使用DigitalOcean搭建VPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Shadowsocks以及客户端"><span class="nav-number">5.</span> <span class="nav-text">配置Shadowsocks以及客户端</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
