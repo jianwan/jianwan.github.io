@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+<meta name="description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  Kotlin 简介目的Kotlin 从">
 <meta name="keywords" content="Kotlin系列">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kotlin基础（Kotlin系列之一）">
 <meta property="og:url" content="http://yoursite.com/2020/06/28/Kotlin基础（Kotlin系列之一）/index.html">
 <meta property="og:site_name" content="薰衣草的国度">
-<meta property="og:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+<meta property="og:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  Kotlin 简介目的Kotlin 从">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-06-27T16:25:57.542Z">
+<meta property="og:updated_time" content="2020-06-27T16:30:55.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kotlin基础（Kotlin系列之一）">
-<meta name="twitter:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+<meta name="twitter:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  Kotlin 简介目的Kotlin 从">
 
 
 
@@ -357,7 +357,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,633
+                  1,631
                 </span>
               
 
@@ -396,9 +396,9 @@
       
         <p><em><code>kotlin</code>语言已经在慢慢成为<code>Java</code>的替代语言，早在 <code>2017</code> 年 <code>Google开发者大会</code> 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 <code>Kotlin</code> 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。</em></p>
 <blockquote>
-<p>本文的目录如下：<br><br>一、<code>Kotlin</code> 的简介；<br><br>二、<code>Kotlin</code> 的基础语法；<br></p>
+<p>本文的目录如下：<br>一、<code>Kotlin</code> 的简介；<br>二、<code>Kotlin</code> 的基础语法；</p>
 </blockquote>
-<h3 id="一、Kotlin-简介"><a href="#一、Kotlin-简介" class="headerlink" title="一、Kotlin 简介"></a>一、<code>Kotlin</code> 简介</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p><strong><code>Kotlin</code> 从被创建之初的目的就是用来替代 <code>java</code>，而且在使用上比java更简洁、安全和务实，且可以与java互相调用。</strong>  关于 <code>Kotlin</code> 语言的这些特点可以在接下来的介绍和使用中慢慢了解。</p>
+<h3 id="Kotlin-简介"><a href="#Kotlin-简介" class="headerlink" title="Kotlin 简介"></a><code>Kotlin</code> 简介</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p><strong><code>Kotlin</code> 从被创建之初的目的就是用来替代 <code>java</code>，而且在使用上比java更简洁、安全和务实，且可以与java互相调用。</strong>  关于 <code>Kotlin</code> 语言的这些特点可以在接下来的介绍和使用中慢慢了解。</p>
 <h4 id="Kotlin-和-Java-的异同"><a href="#Kotlin-和-Java-的异同" class="headerlink" title="Kotlin 和 Java 的异同"></a><code>Kotlin</code> 和 <code>Java</code> 的异同</h4><ul>
 <li><p><code>Kotlin</code> 对 <code>Java</code> 百分百兼容，在任何使用 <code>Java</code> 语言的地方都可以使用 <code>kotlin</code>。在 <code>AndroidStudio</code> 中复制 <code>Java</code> 代码到<code>.kt</code>文件中会直接将 <code>Java</code> 语言转化成 <code>kotlin</code> 语言；</p>
 </li>
@@ -418,7 +418,7 @@
 <li><p><a href="https://developer.android.com/kotlin/get-started" target="_blank" rel="noopener">在Android中使用Kotlin</a> （<code>Android developer</code> 官网）</p>
 </li>
 </ul>
-<h3 id="二、Kotlin的基础语法"><a href="#二、Kotlin的基础语法" class="headerlink" title="二、Kotlin的基础语法"></a>二、Kotlin的基础语法</h3><blockquote>
+<h3 id="Kotlin的基础语法"><a href="#Kotlin的基础语法" class="headerlink" title="Kotlin的基础语法"></a>Kotlin的基础语法</h3><blockquote>
 <p>主要包括：函数声明、变量、字符串模板、类和属性、目录和包、枚举类型、<code>when</code>、<code>if</code>、<code>while</code>、<code>for</code>、智能转化 以及 异常处理。</p>
 </blockquote>
 <h4 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fun max(a: Int, b: Int): Int &#123;</span><br><span class="line">        return if (a &gt; b) a else b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//可以简写为</span><br><span class="line">fun max(a: Int, b: Int) = if (a &gt; b) a else b</span><br></pre></td></tr></table></figure>
@@ -733,7 +733,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Kotlin-简介"><span class="nav-number">1.</span> <span class="nav-text">一、Kotlin 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目的"><span class="nav-number">1.1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kotlin-和-Java-的异同"><span class="nav-number">1.2.</span> <span class="nav-text">Kotlin 和 Java 的异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些链接🔗"><span class="nav-number">1.3.</span> <span class="nav-text">一些链接🔗</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Kotlin的基础语法"><span class="nav-number">2.</span> <span class="nav-text">二、Kotlin的基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明"><span class="nav-number">2.1.</span> <span class="nav-text">函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">2.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串模版"><span class="nav-number">2.3.</span> <span class="nav-text">字符串模版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类和属性"><span class="nav-number">2.4.</span> <span class="nav-text">类和属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录和包"><span class="nav-number">2.5.</span> <span class="nav-text">目录和包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明枚举类型"><span class="nav-number">2.6.</span> <span class="nav-text">声明枚举类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when的使用"><span class="nav-number">2.7.</span> <span class="nav-text">when的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#if的使用"><span class="nav-number">2.8.</span> <span class="nav-text">if的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while和for循环"><span class="nav-number">2.9.</span> <span class="nav-text">while和for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智能转化"><span class="nav-number">2.10.</span> <span class="nav-text">智能转化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抛出和处理异常"><span class="nav-number">2.11.</span> <span class="nav-text">抛出和处理异常</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin-简介"><span class="nav-number">1.</span> <span class="nav-text">Kotlin 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目的"><span class="nav-number">1.1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kotlin-和-Java-的异同"><span class="nav-number">1.2.</span> <span class="nav-text">Kotlin 和 Java 的异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些链接🔗"><span class="nav-number">1.3.</span> <span class="nav-text">一些链接🔗</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Kotlin的基础语法"><span class="nav-number">2.</span> <span class="nav-text">Kotlin的基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明"><span class="nav-number">2.1.</span> <span class="nav-text">函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">2.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串模版"><span class="nav-number">2.3.</span> <span class="nav-text">字符串模版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类和属性"><span class="nav-number">2.4.</span> <span class="nav-text">类和属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录和包"><span class="nav-number">2.5.</span> <span class="nav-text">目录和包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明枚举类型"><span class="nav-number">2.6.</span> <span class="nav-text">声明枚举类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when的使用"><span class="nav-number">2.7.</span> <span class="nav-text">when的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#if的使用"><span class="nav-number">2.8.</span> <span class="nav-text">if的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while和for循环"><span class="nav-number">2.9.</span> <span class="nav-text">while和for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智能转化"><span class="nav-number">2.10.</span> <span class="nav-text">智能转化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抛出和处理异常"><span class="nav-number">2.11.</span> <span class="nav-text">抛出和处理异常</span></a></li></ol></li></ol></div>
             
 
           </div>
