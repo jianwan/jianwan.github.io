@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Kotlin系列," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+<meta name="keywords" content="Kotlin系列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kotlin基础（Kotlin系列之一）">
+<meta property="og:url" content="http://yoursite.com/2020/06/28/Kotlin基础（Kotlin系列之一）/index.html">
+<meta property="og:site_name" content="薰衣草的国度">
+<meta property="og:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-06-27T16:25:57.542Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kotlin基础（Kotlin系列之一）">
+<meta name="twitter:description" content="kotlin语言已经在慢慢成为Java的替代语言，早在 2017 年 Google开发者大会 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 Kotlin 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。  本文的目录如下：一、Kotlin 的简介；二、Kotlin 的基础语法；  一、Kotlin 简介目的Kotlin">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/06/28/Kotlin基础（Kotlin系列之一）/"/>
+
+
+
+
+
+  <title>Kotlin基础（Kotlin系列之一） | 薰衣草的国度</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">薰衣草的国度</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习，要一个脚步 一个脚印</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/Kotlin基础（Kotlin系列之一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jianwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/large/005HNx1Sgy1fnjx8y6k4bj30qo0npn20.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="薰衣草的国度">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Kotlin基础（Kotlin系列之一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-28T00:14:38+08:00">
+                2020-06-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/06/28/Kotlin基础（Kotlin系列之一）/" class="leancloud_visitors" data-flag-title="Kotlin基础（Kotlin系列之一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,633
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><em><code>kotlin</code>语言已经在慢慢成为<code>Java</code>的替代语言，早在 <code>2017</code> 年 <code>Google开发者大会</code> 的时候就进入大众的视野，从此流行起来。自己因为个人原因一直没有完整的学习，趁着这个机会把 <code>Kotlin</code> 认真啃一遍（主要参考《Kotlin实战》这本书籍），希望以此博客记录自己的学习过程。</em></p>
+<blockquote>
+<p>本文的目录如下：<br><br>一、<code>Kotlin</code> 的简介；<br><br>二、<code>Kotlin</code> 的基础语法；<br></p>
+</blockquote>
+<h3 id="一、Kotlin-简介"><a href="#一、Kotlin-简介" class="headerlink" title="一、Kotlin 简介"></a>一、<code>Kotlin</code> 简介</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><p><strong><code>Kotlin</code> 从被创建之初的目的就是用来替代 <code>java</code>，而且在使用上比java更简洁、安全和务实，且可以与java互相调用。</strong>  关于 <code>Kotlin</code> 语言的这些特点可以在接下来的介绍和使用中慢慢了解。</p>
+<h4 id="Kotlin-和-Java-的异同"><a href="#Kotlin-和-Java-的异同" class="headerlink" title="Kotlin 和 Java 的异同"></a><code>Kotlin</code> 和 <code>Java</code> 的异同</h4><ul>
+<li><p><code>Kotlin</code> 对 <code>Java</code> 百分百兼容，在任何使用 <code>Java</code> 语言的地方都可以使用 <code>kotlin</code>。在 <code>AndroidStudio</code> 中复制 <code>Java</code> 代码到<code>.kt</code>文件中会直接将 <code>Java</code> 语言转化成 <code>kotlin</code> 语言；</p>
+</li>
+<li><p>区别除了上述的优点外，最大的区别可能是 <code>kotlin</code> 是 <a href="http://www.ruanyifeng.com/blog/2012/04/functional_programming.html" target="_blank" rel="noopener">函数式编程</a>，体现如下：</p>
+<ul>
+<li>函数类型：允许函数接收其他函数作为参数，或返回其他函数；</li>
+<li>支持 <code>lambda</code> 表达式，用最少的样板代码方便地传递代码块；</li>
+<li>数据类，提供了创建不可变数据对象的简明语法；</li>
+<li>标准库中提供丰富的函数式API，让你用函数式编程风格操作对象和集合；</li>
+</ul>
+<p>如果没有理解也没有关系，后面介绍会涉及到，再回过头来看即可。</p>
+</li>
+</ul>
+<h4 id="一些链接🔗"><a href="#一些链接🔗" class="headerlink" title="一些链接🔗"></a>一些链接🔗</h4><ul>
+<li><p><a href="https://www.kotlincn.net/docs/reference/basic-syntax.html" target="_blank" rel="noopener">Kotlin 官方中文网站</a></p>
+</li>
+<li><p><a href="https://developer.android.com/kotlin/get-started" target="_blank" rel="noopener">在Android中使用Kotlin</a> （<code>Android developer</code> 官网）</p>
+</li>
+</ul>
+<h3 id="二、Kotlin的基础语法"><a href="#二、Kotlin的基础语法" class="headerlink" title="二、Kotlin的基础语法"></a>二、Kotlin的基础语法</h3><blockquote>
+<p>主要包括：函数声明、变量、字符串模板、类和属性、目录和包、枚举类型、<code>when</code>、<code>if</code>、<code>while</code>、<code>for</code>、智能转化 以及 异常处理。</p>
+</blockquote>
+<h4 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fun max(a: Int, b: Int): Int &#123;</span><br><span class="line">        return if (a &gt; b) a else b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//可以简写为</span><br><span class="line">fun max(a: Int, b: Int) = if (a &gt; b) a else b</span><br></pre></td></tr></table></figure>
+<p>以上述函数举例说明:<br></p>
+<ul>
+<li>函数声明都以 <code>fun</code> 关键字开头</li>
+<li><code>max</code> 是方法名字，后面紧跟着括号内的是输入参数；</li>
+<li>以<code>：</code>冒号表示类型，<code>kotlin</code> 先写变量，后面接变量类型；</li>
+<li>参数之后跟着返回类型，如果没有可以省略；</li>
+<li><code>Kotlin</code> 中语句结尾不需要分号<code>;</code> ;</li>
+<li><code>return</code>的<code>if</code>是表达式而非语句（表达式和语句的区别在于表达式有返回值，而语句没有）；</li>
+</ul>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p><em><code>Kotlin</code>声明变量比<code>Java</code>中要简洁；</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> val a: Int = 1  // 立即赋值</span><br><span class="line"> val b = 2   // 自动推断出 `Int` 类型（类型推导）</span><br><span class="line"> val c: Int  // 如果没有初始值类型不能省略</span><br><span class="line"> c = 3       // 明确赋值</span><br><span class="line">	 </span><br><span class="line">var d: Int？ = null //赋值可为空</span><br></pre></td></tr></table></figure>
+<p>以上述代码举例说明：</p>
+<ul>
+<li><code>Kotlin</code>声明变量只有 <code>val</code>(不可变变量，只能初始化一次，来自<code>value</code>) 和<code>`var</code> （可变变量，来自<code>variable</code>）两种；</li>
+<li>声明变量且赋值时，可以省略变量类型，因为<code>kotlin</code>可以自动推导变量类型；</li>
+<li>变量赋值时使用 <code>？</code> 表示可为空；</li>
+<li>默认属性是<code>public</code>，可省略；</li>
+</ul>
+<p>PS : 虽然<code>val</code>引用自身是不可变的，但是它所指的对象可能是可变的* (如果不理解没有关系，后续章节会介绍)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val language = arrayListOf(&quot;java&quot;)</span><br><span class="line">language.add(&quot;kotlin&quot;)</span><br></pre></td></tr></table></figure>
+<h4 id="字符串模版"><a href="#字符串模版" class="headerlink" title="字符串模版"></a>字符串模版</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fun max(a: Int, : Int): Int &#123;</span><br><span class="line">        var result = if (a &gt; b) a else b</span><br><span class="line">        println(&quot;result = $result&quot;)  //等同于：println(&quot;result = &quot; + result)</span><br><span class="line">        return result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>还是上面的代码，稍微修改后可以看出：</p>
+<ul>
+<li><code>kotlin</code>中可以通过在变量名加上符号 <code>$</code> 来打印出该变量，效率更高；（编译后可看出是通过<code>stringBuilder</code>实现的）；</li>
+<li><code>println</code>是<code>kotlin</code>中的<code>API</code>库，使用方便简洁；</li>
+</ul>
+<h4 id="类和属性"><a href="#类和属性" class="headerlink" title="类和属性"></a>类和属性</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//kotlin</span><br><span class="line">class Person(name: String) &#123;</span><br><span class="line">  	 lateinit var name: String</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line">//使用</span><br><span class="line">	</span><br><span class="line">//Kotlin</span><br><span class="line">var person = Person(&quot;Bob&quot;)</span><br><span class="line">person.name  //get name</span><br><span class="line">person.name = &quot;new Name&quot; //set name</span><br><span class="line"></span><br><span class="line">//java</span><br><span class="line">Person person = new Person(&quot;Bob&quot;);</span><br><span class="line">person.getName();</span><br><span class="line">person.setName(&quot;Bob&quot;);</span><br></pre></td></tr></table></figure>
+<p><code>kotlin</code>中对于类属性具有默认的<code>getter</code>和<code>setter</code>（<code>val</code>变量只具有<code>getter</code>，<code>var</code>变量具有<code>getter</code>和<code>setter</code>）。</p>
+<h4 id="目录和包"><a href="#目录和包" class="headerlink" title="目录和包"></a>目录和包</h4><p><code>Kotlin</code>中包名和目录路径可以不一致（但是最好保持一致）。</p>
+<h4 id="声明枚举类型"><a href="#声明枚举类型" class="headerlink" title="声明枚举类型"></a>声明枚举类型</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">enum class color &#123;</span><br><span class="line">      RED, ORAGE, YELLOW</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用关键字 <code>num class</code></li>
+<li>枚举类中定义方法，需要用分号区分枚举常量 和方法定义；</li>
+</ul>
+<h4 id="when的使用"><a href="#when的使用" class="headerlink" title="when的使用"></a>when的使用</h4><p><em>when 和if一样，也是一个有返回值的表达式。</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">enum class Colors &#123;</span><br><span class="line">       RED_1, RED_2, ORAGE, YELLOW</span><br><span class="line">&#125;</span><br><span class="line">     </span><br><span class="line">var color = when(color) &#123;</span><br><span class="line">          Colors.RED_1, Colors.RED_2 -&gt; &quot;RED&quot;</span><br><span class="line">          Colors.ORAGE -&gt; &quot;ORAGE&quot;</span><br><span class="line">          Colors.YELLOW -&gt; &quot;YELLOW&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>不需要<code>break</code>语句；</li>
+<li>多个分支可以用逗号隔开；</li>
+<li><code>when</code>也可以不带参数；</li>
+</ul>
+<h4 id="if的使用"><a href="#if的使用" class="headerlink" title="if的使用"></a>if的使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fun max(a: Int, b: Int): Int &#123;</span><br><span class="line">       var result = if (a &gt; b) a else b</span><br><span class="line">       return result</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果<code>if</code>分支只有一个表达式，那么花括号可以省略；</li>
+<li>如果<code>if</code>分支是一个代码块，则代码块中的最后一个表达式可以作为结果返回；</li>
+</ul>
+<h4 id="while和for循环"><a href="#while和for循环" class="headerlink" title="while和for循环"></a>while和for循环</h4><p> <em>在kotlin中，while循环的使用（while和do-while的使用）和Java中基本一致。</em></p>
+<p> 对于<code>for</code>循环，<code>kotlin</code>中有所不同。在<code>kotlin</code>中引入了 <code>区间</code> 的概念，使用运算符  <code>..</code> 来表示区间。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">val oneToTen = 1..10</span><br><span class="line">for (a in oneToTen) &#123;</span><br><span class="line">           println(&quot;a = $a&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//in的使用</span><br><span class="line">c in &apos;a&apos;..&apos;z&apos;  //等于 a &lt;= &apos;c&apos; &amp;&amp; c &lt;= &apos;z&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>kotlin</code>区间是包含前后边界值的；</li>
+<li>使用了关键字 <code>in</code> 检查区间成员（也可以检查集合内容，in的相反是 <code>!n</code>）</li>
+<li><code>in</code> 关键字的使用如上所示，同时<code>in</code>和<code>when</code>、<code>if</code>一些关键字可以搭配使用；</li>
+</ul>
+<h4 id="智能转化"><a href="#智能转化" class="headerlink" title="智能转化"></a>智能转化</h4><p><em>智能转化是kotlin的类型转换。</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (e is Int) &#123;</span><br><span class="line">      return &quot;e is Int, value is $e&quot;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">//显示转化</span><br><span class="line">val a = e as Int</span><br></pre></td></tr></table></figure>
+<ul>
+<li>经过<code>is</code>关键字后，<code>e</code>的类型被智能转化成<code>Int</code>类型了；</li>
+<li>还可以使用关键字<code>as</code>，显示的转化类型；</li>
+</ul>
+<h4 id="抛出和处理异常"><a href="#抛出和处理异常" class="headerlink" title="抛出和处理异常"></a>抛出和处理异常</h4><p><code>kotlin</code>中抛出和处理异常基本和<code>Java</code>类似，与<code>Java</code>不同的是<code>throw</code>结构可以是一个表达式，能作为另一个表达式的一部分使用；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">val percentage = </span><br><span class="line">            if (a in 1..10) </span><br><span class="line">                a</span><br><span class="line">            else</span><br><span class="line">                throw IllegalArgumentException &#123;</span><br><span class="line">                    &quot;number must be between 1 and 10 : $a is out of &quot;</span><br><span class="line">               &#125;</span><br></pre></td></tr></table></figure>
+<p><code>Kotlin</code>使用<code>try catch finally</code>和<code>Java</code>基本类似，同时<code>try catch</code>也是一个表达式，且该表达式的值是最后一个表示式的值；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">val reader: BufferedReader;</span><br><span class="line">        val number =</span><br><span class="line">            try &#123;</span><br><span class="line">                Integer.parseInt(reader.readLine())</span><br><span class="line">            &#125; catch (e: NumberFormatException) &#123;</span><br><span class="line">                null</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jianwan 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Kotlin系列/" rel="tag"># Kotlin系列</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/06/07/重新出发/" rel="next" title="重新出发">
+                <i class="fa fa-chevron-left"></i> 重新出发
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+    <div class="comments" id="comments">
+      <div id="uyan_frame"></div>
+	  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://ww1.sinaimg.cn/large/005HNx1Sgy1fnjx8y6k4bj30qo0npn20.jpg"
+                alt="Jianwan" />
+            
+              <p class="site-author-name" itemprop="name">Jianwan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jianwan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/65c389137b9f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Kotlin-简介"><span class="nav-number">1.</span> <span class="nav-text">一、Kotlin 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#目的"><span class="nav-number">1.1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Kotlin-和-Java-的异同"><span class="nav-number">1.2.</span> <span class="nav-text">Kotlin 和 Java 的异同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些链接🔗"><span class="nav-number">1.3.</span> <span class="nav-text">一些链接🔗</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Kotlin的基础语法"><span class="nav-number">2.</span> <span class="nav-text">二、Kotlin的基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#函数声明"><span class="nav-number">2.1.</span> <span class="nav-text">函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量"><span class="nav-number">2.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串模版"><span class="nav-number">2.3.</span> <span class="nav-text">字符串模版</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类和属性"><span class="nav-number">2.4.</span> <span class="nav-text">类和属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录和包"><span class="nav-number">2.5.</span> <span class="nav-text">目录和包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明枚举类型"><span class="nav-number">2.6.</span> <span class="nav-text">声明枚举类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when的使用"><span class="nav-number">2.7.</span> <span class="nav-text">when的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#if的使用"><span class="nav-number">2.8.</span> <span class="nav-text">if的使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#while和for循环"><span class="nav-number">2.9.</span> <span class="nav-text">while和for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#智能转化"><span class="nav-number">2.10.</span> <span class="nav-text">智能转化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抛出和处理异常"><span class="nav-number">2.11.</span> <span class="nav-text">抛出和处理异常</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jianwan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共11.1k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2158984"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("r4sNpGO78linxO8HetW27JGQ-gzGzoHsz", "TaO4irGKYNd3a2knGIgXvjBw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+</body>
+</html>
