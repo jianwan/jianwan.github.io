@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="写在开头​        Python 是之前一直想学习的一门语言，但是因为没有坚持下来都放弃了。那为什么这次会突发奇想现在开始学习呢？原因有两个，一个是端午没有提报上加班，因此加上周末有三天假期；二是在家无聊的时候，想着为什么不把时间花在学习上呢？于是打开《极客时间》 一看，发现之前领的课程还能看，因此打算在家把这个课程刷完。（默默的下定决心要在家把没有加上班损失的钱赚回来） ​">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 学习系列之基础（一）">
+<meta property="og:url" content="http://yoursite.com/2021/06/14/Python-学习系列之基础（一）/index.html">
+<meta property="og:site_name" content="薰衣草的国度">
+<meta property="og:description" content="写在开头​        Python 是之前一直想学习的一门语言，但是因为没有坚持下来都放弃了。那为什么这次会突发奇想现在开始学习呢？原因有两个，一个是端午没有提报上加班，因此加上周末有三天假期；二是在家无聊的时候，想着为什么不把时间花在学习上呢？于是打开《极客时间》 一看，发现之前领的课程还能看，因此打算在家把这个课程刷完。（默默的下定决心要在家把没有加上班损失的钱赚回来） ​">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/Users/jianwan/Library/Application%20Support/typora-user-images/image-20210612231101223.png">
+<meta property="og:image" content="http://yoursite.com/Users/jianwan/Library/Application%20Support/typora-user-images/image-20210612233009113.png">
+<meta property="og:image" content="http://yoursite.com/Users/jianwan/Library/Application%20Support/typora-user-images/image-20210612233724747.png">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-820fa01be2dfcc080ec67d00ed9efd55_1440w.jpg?source=1940ef5c">
+<meta property="og:updated_time" content="2021-06-13T17:24:16.268Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 学习系列之基础（一）">
+<meta name="twitter:description" content="写在开头​        Python 是之前一直想学习的一门语言，但是因为没有坚持下来都放弃了。那为什么这次会突发奇想现在开始学习呢？原因有两个，一个是端午没有提报上加班，因此加上周末有三天假期；二是在家无聊的时候，想着为什么不把时间花在学习上呢？于是打开《极客时间》 一看，发现之前领的课程还能看，因此打算在家把这个课程刷完。（默默的下定决心要在家把没有加上班损失的钱赚回来） ​">
+<meta name="twitter:image" content="http://yoursite.com/Users/jianwan/Library/Application%20Support/typora-user-images/image-20210612231101223.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2021/06/14/Python-学习系列之基础（一）/"/>
+
+
+
+
+
+  <title>Python 学习系列之基础（一） | 薰衣草的国度</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">薰衣草的国度</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">学习，要一个脚步 一个脚印</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/06/14/Python-学习系列之基础（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jianwan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ww1.sinaimg.cn/large/005HNx1Sgy1fnjx8y6k4bj30qo0npn20.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="薰衣草的国度">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python 学习系列之基础（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-14T01:14:40+08:00">
+                2021-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2021/06/14/Python-学习系列之基础（一）/" class="leancloud_visitors" data-flag-title="Python 学习系列之基础（一）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,007
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h3><p>​        <code>Python</code> 是之前一直想学习的一门语言，但是因为没有坚持下来都放弃了。那为什么这次会突发奇想现在开始学习呢？原因有两个，一个是端午没有提报上加班，因此加上周末有三天假期；二是在家无聊的时候，想着为什么不把时间花在学习上呢？于是打开《极客时间》 一看，发现之前领的课程还能看，因此打算在家把这个课程刷完。（默默的下定决心要在家把没有加上班损失的钱赚回来）</p>
+<p>​        学习 <code>Python</code>  最开始的主要目的之一是想写一个快速批量删除的工具🔧，或许之后还有其他的作用～</p>
+<p>文章主要参考链接🔗</p>
+<ul>
+<li>《极客时间》的 <a href="https://time.geekbang.org/course/intro/100008801" target="_blank" rel="noopener">《零基础学 <code>Python</code> 》</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/1016959663602400" target="_blank" rel="noopener">廖雪峰的官方网站</a>  （ <code>Python</code> ）</li>
+</ul>
+<h3 id="一、Python-简介"><a href="#一、Python-简介" class="headerlink" title="一、Python 简介"></a>一、Python 简介</h3><h4 id="1、什么是-Python"><a href="#1、什么是-Python" class="headerlink" title="1、什么是 Python"></a>1、什么是 <code>Python</code></h4><p><code>Python</code> 是一门高级语言，和 <code>Java</code> 语言、<code>C语言</code>一样，但是比它们更加 <strong><em>简洁方便</em></strong>。在我看来，<code>Python</code> 可以写很多好玩且有用的小工具🔧。当然，<code>Python</code> 可以写爬虫，可以写人工智能等等，需要我们去发掘它的各种作用。</p>
+<p>PS： <code>Python</code> 有2.x和3.x的版本，目前强烈建议使用3.x来进行开发，如果你想了解它们之间有什么区别，可以点击 <a href="https://www.runoob.com/python/python-2x-3x.html" target="_blank" rel="noopener">这里</a>。 </p>
+<h4 id="2、开发前准备"><a href="#2、开发前准备" class="headerlink" title="2、开发前准备"></a>2、开发前准备</h4><ul>
+<li><strong>开发工具：</strong>直接上手 <code>PyCharm</code>，对于新手足够了，你可以点击 <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener">这里</a> 下载。</li>
+<li><strong>下载：</strong>请点击 <a href="https://www.python.org/downloads/" target="_blank" rel="noopener">这里</a> （Python 3.x），根据不同系统进行安装，安装完毕可以输入  <code>python3</code> 查看(截图为 <code>Mac</code>)，当在  <code>&gt;&gt;&gt;</code> 状态下表明你已经进入了 <code>Python</code> 的开发环境。</li>
+</ul>
+<p><img src="/Users/jianwan/Library/Application Support/typora-user-images/image-20210612231101223.png" alt="image-20210612231101223"></p>
+<h4 id="3、第一个Python-程序"><a href="#3、第一个Python-程序" class="headerlink" title="3、第一个Python 程序"></a>3、第一个Python 程序</h4><ul>
+<li><p>使用  <code>PyCharm</code></p>
+<p><img src="/Users/jianwan/Library/Application Support/typora-user-images/image-20210612233009113.png" alt="image-20210612233009113"></p>
+</li>
+<li><p>使用命令：</p>
+<p><img src="/Users/jianwan/Library/Application Support/typora-user-images/image-20210612233724747.png" alt="image-20210612233724747"></p>
+</li>
+</ul>
+<h3 id="二、Python-基础"><a href="#二、Python-基础" class="headerlink" title="二、Python 基础"></a>二、Python 基础</h3><blockquote>
+<p>因为本人有 <code>Java</code> 语言的基础，所以下面的内容会基于 <code>Python</code> 和其他语言的异同来讲解，如果你是新手，请点击 <a href="https://www.runoob.com/python/python-tutorial.html" target="_blank" rel="noopener">这里</a> 了解</p>
+</blockquote>
+<h4 id="1、数据类型和变量"><a href="#1、数据类型和变量" class="headerlink" title="1、数据类型和变量"></a>1、<strong>数据类型和变量</strong></h4><h5 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h5><ul>
+<li><p>整数 / 浮点数 ：和 Java是一样的；</p>
+</li>
+<li><p>字符串：可以使用单引号 <code>‘’</code>或者双引号 <code>“”</code> 括起来的任意文本，如 <code>‘abc’</code> 或者 <code>“abc”</code> ；区域于 <code>Java</code> 只能是双括号 <code>“abc”</code>;</p>
+<p>PS: </p>
+<ul>
+<li><p>转义字符 \ 可以用于标识既有<code>‘’又有</code> <code>“”</code> 的情况，如 <code>print(&quot;I\&#39;m \&quot;OK\&quot;!&quot;)</code>   输出内容是：<code>I&#39;m &quot;OK&quot;!</code></p>
+</li>
+<li><p>使用r能够去除反义，直接输出 \，如 print(r’’’hello,\nworld’’’) 输出的是 <code>hello,\nworld</code>，如果没有r，那么输出的是 </p>
+<p><code>hello,
+world</code></p>
+</li>
+</ul>
+</li>
+<li><p>布尔值，和 Java一致；</p>
+</li>
+<li>空值：<code>None</code> 是一个特殊的空值；</li>
+</ul>
+<h5 id="变量和常量"><a href="#变量和常量" class="headerlink" title="变量和常量"></a>变量和常量</h5><ul>
+<li><p>变量：<code>Python</code> 里面的变量很方便，可以直接赋予，比如 <code>a = 1</code> ，这就定义好了一个值为 <code>2</code> 的整数型变量 <code>a</code>，<strong><em>无须和 <code>Java</code> 一样定义好变量的类型</em></strong>。从这里可以看出，<em><code>Python</code> 是一种 <strong>动态语言</strong></em></p>
+<p>PS: Python 没有常量变量之分，所谓的常量实现其实也是一个变量，只不过使用 大写字母来区分，本质上还是一个变量，可以再次写入值。</p>
+</li>
+<li><p>打印变量：如 <code>print(&quot;hello, my name is %s&quot; %&quot;jian&quot;)</code> 的打印结果是 <code>hello, my name is jian</code>，多个参数替换可以用括号括起来 ;</p>
+</li>
+</ul>
+<h5 id="列表和元组"><a href="#列表和元组" class="headerlink" title="列表和元组"></a>列表和元组</h5><ul>
+<li><p>列表（<code>List</code>）：一种有序集合，可以随时添加和删除，</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义方式  可以包含不同类型的变量</span></span><br><span class="line">language = [<span class="string">'C'</span>, <span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'C++'</span>, <span class="string">'php'</span>]]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增</span></span><br><span class="line">language.insert(<span class="number">0</span>, <span class="string">'go'</span>)</span><br><span class="line">print(language)</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">language.pop(<span class="number">0</span>)</span><br><span class="line">print(language)</span><br><span class="line"><span class="comment"># 改</span></span><br><span class="line">language[<span class="number">0</span>]</span><br><span class="line">print(language)</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">print(language[<span class="number">0</span>])     </span><br><span class="line"></span><br><span class="line"><span class="comment"># python有一个很有意思的地方是，如果给的索引值是负数的话，会倒着数，当然，如果超过其长度的话，还是会出现越界 </span></span><br><span class="line">print(language[-1])    --&gt;  ['C++', 'php']</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>元组（tuple）： 元组和list很相似，但是它的元素无法更改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义方式</span></span><br><span class="line">language = (<span class="string">'C'</span>, <span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'C++'</span>, <span class="string">'php'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个空的元组</span></span><br><span class="line">person = ()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个元素的元组 需要加逗号用于区分()不是括号而是元组</span></span><br><span class="line">person = (myself, )</span><br><span class="line"></span><br><span class="line"><span class="comment"># PS：虽然元组的元素无法更改，但是如果元组的某一个元素是列表，那么该列表的元素是可以更改的，比如</span></span><br><span class="line">language[<span class="number">3</span>][<span class="number">0</span>] = <span class="string">'go'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>set：无序和无重复元素的集合</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 传入的参数为list</span></span><br><span class="line">s = set([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>])</span><br><span class="line">print(s)</span><br><span class="line"><span class="comment"># 输出是</span></span><br><span class="line">&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 操作</span></span><br><span class="line">s.add(xxx)</span><br><span class="line">s.remove(xxx)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="字典dict"><a href="#字典dict" class="headerlink" title="字典dict"></a>字典dict</h5><p>类似于 <code>Java</code> 里面的 <code>map</code>，使用 <code>key-value</code> 存储数据</p>
+<ul>
+<li><p>增删改查</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增和改</span></span><br><span class="line">d[<span class="string">"key"</span>] = ‘value’</span><br><span class="line"><span class="comment"># 删</span></span><br><span class="line">d.pop(<span class="string">"key"</span>)</span><br><span class="line"><span class="comment"># 查</span></span><br><span class="line">d.get(<span class="string">"key"</span>, <span class="string">"defaulut_value"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>dict</code> 查找速度很快的原因：<code>key-value</code> 的存储实现方式是通过 hash表去实现的，理论上 时间复杂度是O(1) ，考虑到冲突碰撞，最差的情况下时间复杂度是 O(n)；</p>
+<p><img src="https://pic3.zhimg.com/80/v2-820fa01be2dfcc080ec67d00ed9efd55_1440w.jpg?source=1940ef5c" alt="img"></p>
+<p>​                                                                                           <a href="https://www.bigocheatsheet.com/" target="_blank" rel="noopener">图片来源</a></p>
+</li>
+<li><p>与 <code>list</code> 相比较，dict具有以下特点：</p>
+<ul>
+<li>查找和插入的速度极快，不会随着key的增加而变慢；</li>
+<li>需要占用大量的内存，内存浪费多。</li>
+</ul>
+</li>
+</ul>
+<p>PS：<code>dict</code> 是以时间换空间的一种方式；</p>
+<h4 id="2、条件判断和循环语句"><a href="#2、条件判断和循环语句" class="headerlink" title="2、条件判断和循环语句"></a>2、条件判断和循环语句</h4><blockquote>
+<p>Python 的条件判断和循环语句与 Java 区别不大，主要是语法的小区别；</p>
+</blockquote>
+<h5 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a><code>if</code>语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 从上往下执行，满足一个条件就跳过后面的判断</span></span><br><span class="line"><span class="keyword">if</span> &lt;条件判断<span class="number">1</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">1</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">2</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">2</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">3</span>&gt;:</span><br><span class="line">    &lt;执行<span class="number">3</span>&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    &lt;执行<span class="number">4</span>&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">languages = (<span class="string">'C'</span>, <span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'C++'</span>, <span class="string">'php'</span>])</span><br><span class="line"><span class="comment"># for···in 结构</span></span><br><span class="line"><span class="keyword">for</span> language <span class="keyword">in</span> languages:</span><br><span class="line">    print(language)</span><br><span class="line">    </span><br><span class="line"><span class="comment"># while 结构</span></span><br><span class="line">languages = (<span class="string">'C'</span>, <span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'C++'</span>, <span class="string">'php'</span>])</span><br><span class="line">count = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> count &lt; len(language):</span><br><span class="line">    print(language[count])</span><br><span class="line">    count = count + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 当然，也可以使用break和 continue关键字， break 直接退出循环，continue 退出当次循环，开启下一次循环；</span></span><br></pre></td></tr></table></figure>
+<h3 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h3><h4 id="1、函数的定义"><a href="#1、函数的定义" class="headerlink" title="1、函数的定义"></a>1、函数的定义</h4><p>使用 <code>def</code> 关键字定义，如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">languages = (<span class="string">'C'</span>, <span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'C++'</span>, <span class="string">'php'</span>])</span><br><span class="line"><span class="comment"># 定义函数 需要函数名和参数个数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">my_traverse</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> languages:</span><br><span class="line">        print(x)</span><br><span class="line"><span class="comment"># 会自动检查参数类型是否正确，如果不对会报错</span></span><br><span class="line">my_traverse(language)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 空函数定义 占位</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">nop</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+<p>可以使用 <code>return</code> 返回函数运算结果，可以同时返回多个值（本质上是一个 元组）</p>
+<h4 id="2、参数"><a href="#2、参数" class="headerlink" title="2、参数"></a>2、参数</h4><ul>
+<li><p>可以定义默认参数，类似于 <code>Kotlin</code>;</p>
+</li>
+<li><p>可以定义可变参数，如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># *numbers 表示把numbers这个元组的所有元素作为可变参数传进去</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(*numbers)</span>:</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">        sum = sum + n * n</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line"><span class="comment"># 传入的参数是可以变化的</span></span><br><span class="line">print(calc(<span class="number">1</span>))</span><br><span class="line">print(calc(<span class="number">2</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关键字参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, **kw)</span>:</span></span><br><span class="line">    print(<span class="string">'name:'</span>, name, <span class="string">'age:'</span>, age, <span class="string">'other:'</span>, kw)</span><br><span class="line">    </span><br><span class="line">person(<span class="string">'Bob'</span>, <span class="number">35</span>, city=<span class="string">'Beijing'</span>)</span><br><span class="line"><span class="comment"># 输出是：name: Bob age: 35 other: &#123;'city': 'Beijing'&#125;     </span></span><br><span class="line"><span class="comment"># PS：name, age为必选参数, **kw是关键字参数，用于函数的扩展功能；</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>命名关键字参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 还可以限定关键字参数传入的名称，只接受 city和job作为关键字参数，不过这样定义之后，必须要传入</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name, age, *, city, job)</span>:</span></span><br><span class="line">    print(name, age, city, job)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参数组合</p>
+<p>在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：必选参数、默认参数、可变参数、命名关键字参数和关键字参数。</p>
+</li>
+</ul>
+<h3 id="四、结尾"><a href="#四、结尾" class="headerlink" title="四、结尾"></a>四、结尾</h3><blockquote>
+<p>写到这里，本文基本结束了，文章主要是将开始学习 <code>Python</code>  的一些基础知识进行了总结和归纳，参考的链接也在开头附上了，应该会出几篇 <code>Python</code> 系列的文章~ 希望能给大家带来点帮助，如果有不理解的地方欢迎👏 通过邮件联系我（jianwan1221@q q.com）</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Jianwan 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/02/11/2020 --> 2021/" rel="next" title="2020 --> 2021">
+                <i class="fa fa-chevron-left"></i> 2020 --> 2021
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+    <div class="comments" id="comments">
+      <div id="uyan_frame"></div>
+	  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://ww1.sinaimg.cn/large/005HNx1Sgy1fnjx8y6k4bj30qo0npn20.jpg"
+                alt="Jianwan" />
+            
+              <p class="site-author-name" itemprop="name">Jianwan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/jianwan" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/65c389137b9f" target="_blank" title="简书">
+                      
+                        <i class="fa fa-fw fa-heartbeat"></i>简书</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在开头"><span class="nav-number">1.</span> <span class="nav-text">写在开头</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Python-简介"><span class="nav-number">2.</span> <span class="nav-text">一、Python 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、什么是-Python"><span class="nav-number">2.1.</span> <span class="nav-text">1、什么是 Python</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、开发前准备"><span class="nav-number">2.2.</span> <span class="nav-text">2、开发前准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、第一个Python-程序"><span class="nav-number">2.3.</span> <span class="nav-text">3、第一个Python 程序</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Python-基础"><span class="nav-number">3.</span> <span class="nav-text">二、Python 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、数据类型和变量"><span class="nav-number">3.1.</span> <span class="nav-text">1、数据类型和变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本数据类型"><span class="nav-number">3.1.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#变量和常量"><span class="nav-number">3.1.2.</span> <span class="nav-text">变量和常量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#列表和元组"><span class="nav-number">3.1.3.</span> <span class="nav-text">列表和元组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字典dict"><span class="nav-number">3.1.4.</span> <span class="nav-text">字典dict</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、条件判断和循环语句"><span class="nav-number">3.2.</span> <span class="nav-text">2、条件判断和循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#if语句"><span class="nav-number">3.2.1.</span> <span class="nav-text">if语句</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#循环语句"><span class="nav-number">3.2.2.</span> <span class="nav-text">循环语句</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、函数"><span class="nav-number">4.</span> <span class="nav-text">三、函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、函数的定义"><span class="nav-number">4.1.</span> <span class="nav-text">1、函数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、参数"><span class="nav-number">4.2.</span> <span class="nav-text">2、参数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、结尾"><span class="nav-number">5.</span> <span class="nav-text">四、结尾</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jianwan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共13.6k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2158984"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("r4sNpGO78linxO8HetW27JGQ-gzGzoHsz", "TaO4irGKYNd3a2knGIgXvjBw");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+</body>
+</html>
